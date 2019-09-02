@@ -1,0 +1,22 @@
+---
+- hosts: prod
+  become_user: root
+  tasks:
+  - name: Update and upgrade apt packages
+    apt:
+     upgrade: yes
+     update_cache: yes 
+  - name: install apache2 on ubuntu
+    apt:
+     name: apache2
+     state: present
+  - name: copy html file     
+    copy: 
+     src: /apps/ansible/index.html
+     dest: /var/www/html
+    notify: Start_service_httpd
+  handlers: 
+  - name: Start_service_httpd
+    service:
+      name: apache2
+      state: started

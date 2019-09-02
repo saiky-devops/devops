@@ -1,0 +1,18 @@
+apiVersion:  extensions/v1beta1
+kind:  Deployment
+metadata: 
+  name:  my-deployment
+  labels:  
+    name:  sai
+spec:
+  replicas:  4
+  template:
+    metadata:
+      labels:
+        name:  kumar
+    spec:
+      containers:
+      - name: my-container
+        image:  tomcat
+        ports:
+        - containerPort: 80

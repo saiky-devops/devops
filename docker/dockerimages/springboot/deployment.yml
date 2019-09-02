@@ -1,0 +1,16 @@
+apiVersion:  extensions/v1beta1
+kind:  Deployment
+metadata:
+  name:  spring-boot-deployment
+spec:
+  replicas:  10
+  template:
+    metadata:
+      labels:
+        env:  QA
+    spec:
+      containers:
+      - name:  springbootws
+        image:  saikumardocker123/springboot_rest123:8
+        ports:
+        - containerPort:  8083

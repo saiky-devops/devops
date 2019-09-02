@@ -1,0 +1,16 @@
+apiVersion:  extensions/v1beta1
+kind:  Deployment
+metadata: 
+  name:  ab-deployment
+spec:
+  replicas:  4
+  template:
+    metadata:
+      labels:
+        app:  addressbook
+    spec:
+      containers:
+      - name: ab-container
+        image:  saikumardocker123/addressbook:12
+        ports:
+        - containerPort: 8080
