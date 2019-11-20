@@ -1,6 +1,29 @@
 ---
-- hosts: prod
-  become_user: root
-  become: yes
-  roles:
-  - apache
+- hosts:  remote
+  become_user: yes
+  user: root
+
+  vars:
+    srce: /apps/ansible/index.html
+    desti: /var/www/html
+  tasks:
+    - name: Start service httpd, if not started
+      service:
+        name: apache2
+        state: stopped
+    - name: Add new user kumar
+      user:
+        name: kumar
+        password: $6$K8vqaAIM$d8PLh3kElNhRH.squgM7As8hpbisIkQS3xoFO7giNFBXpU/dVaoNx.zwH/VB53V8ZzNx0c.oPksREZvOQiV6p1
+        comment: kumar
+    - name: Copy file with owner and permissions
+      copy:
+        src: '{{srce}}'
+        dest: '{{desti}}'
+        owner: kumar
+        group: kumar
+        mode: '0755'
+    - name: Start service httpd, if not started
+      service:
+        name: apache2
+        state: started
