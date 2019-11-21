@@ -1,11 +1,13 @@
 ---
-- hosts:  remote
+- name: This is my sample playbook
+  hosts:  remote
   become_user: yes
   user: root
 
   vars:
     srce: /apps/ansible/index.html
     desti: /var/www/html
+    restart_needed: "{{restart}}"
   tasks:
     - name: Start service httpd, if not started
       service:
@@ -23,7 +25,10 @@
         owner: kumar
         group: kumar
         mode: '0755'
-    - name: Start service httpd, if not started
+      notify: restart_apache2
+  handlers:
+    - name: restart_apache2
+      when: restart == "Yes"
       service:
         name: apache2
         state: started
