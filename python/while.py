@@ -3,5 +3,5 @@ while (i<6):
  i+=1
  if i==5:
    break
-   i+=25
+   i+=15
 print(i)
