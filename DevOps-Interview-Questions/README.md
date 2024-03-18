@@ -37,6 +37,7 @@
 
 # Docker:
 
+* Why docker: Easy boot up, Better resource utilization, Environment consistency, Loosely coupled, distributed, elastic, liberated micro-services: applications are broken into smaller, independent pieces and can be deployed and managed dynamically
 * How do you monitor docker containers: by using docker stats, docker events
 * Can you run a Docker container within a Docker container: Yes you can run Docker inside Docker by running Docker in privileged mode.
 * Different types of docker networks: Bridge, host, Overlay, ingress, Macvlan
@@ -50,6 +51,7 @@
 * Recommended security measures for Kubernetes?
 * Minikube : https://kubernetes.io/docs/tasks/tools/install-minikube/
 * Difference between Blue green and Canary deployment.
+* Difference between NameSpaces & Labels: 
 
 
 # Terraform:
@@ -67,7 +69,6 @@ https://stackoverflow.com/questions/32164706/ec2-security-group-vs-iam-group
 * what is CDN, how does it work ?
 * Public IP vs Elastic IP : https://www.quora.com/Whats-the-difference-between-a-public-IP-and-an-elastic-IP-in-AWS-EC2
 * AWS CFT vs Terraform: https://cloudonaut.io/cloudformation-vs-terraform/
-*  How to prevent DDOS (Denial of service):
 *  How do you monitor if an EC2 is going down
 *  How do you recover login to ec2 instance to which you lost the key (once key is lost, it is lost)
 *  How do you monitor VPC
@@ -92,6 +93,7 @@ Two-way SSL authentication (or better mutual authentication or client authentica
 * TCP vs HTTP vs SSL : TCP is your Postal Service just focus on delivering, sequencing of packets,T used mechanisms of sequence and acknowledgment, error detection, error recov. HTTP is your letters, words, messages, requests and commands that go into the envelopes.
 * Explain details what happens when you type curl https://******** ?
 * How to organize a monitoring in a n-node cluster running web application ?
+* How do you secure rest api/DDOS attacks
 
 # Database:
 
@@ -117,6 +119,7 @@ Two-way SSL authentication (or better mutual authentication or client authentica
 
 * How do you scale out a web service ?
 * Describe full set up of a 3 tier web app
+* How to design a system to count click metric data?  
 
 
 # Others:
@@ -143,6 +146,14 @@ EAR: All above files (.jar and .war) are packaged as JAR file with .ear (enterpr
 *  Difference between read timeout, socket timeout and connection timeout: connection timeout: occurs only upon starting the TCP connection. This usually happens if the remote machine does not answer. 
 socket timeout: is dedicated to monitor the continuous incoming data flow. If the data flow is interrupted for the specified timeout the connection is regarded as stalled/broken. Of course this only works with connections where data is received all the time..
 ReadTime: Timeout to read data
+* How do you troubleshoot slow running website ?
+
+Scripts:
+
+* Write a Terraform configuration that provisions an EC2 instance and creates security group rules restricting access to only SSH IP whitelist. Use variables appropriately to allow the instance to be created in any data center, change the instance type, and change the IP whitelist.
+* Write a Dockerfile that installs the latest Python AWS CLI and allows the container run the AWS CLI tool on the command line. The final container image should contain only the necessary elements for support the AWS CLI execution.
+* Write a bash script that hits the AWS EC2 local metadata API, and can be run on an EC2 instance to produce `export` statements which set environment variables containing the instance type, IP address, region, and availability zone.
+
 
 
 
