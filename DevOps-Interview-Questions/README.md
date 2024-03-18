@@ -140,15 +140,15 @@ JAR: EJB modules which contain enterprise java beans (class files) and EJB deplo
 WAR: Web modules which contain Servlet class files, JSP Files, supporting files, GIF and HTML files are packaged as JAR file with .war (web archive) extension
 EAR: All above files (.jar and .war) are packaged as JAR file with .ear (enterprise archive) extension and deployed into Application Server.
 * How can uou deploy same application multiple times on tomcat server ? change the context path
-  <Context docBase="c:\path\to\v1\app.war" path="/app/v1"/>
-<Context docBase="c:\path\to\v2\app.war" path="/app/v2"/>
+            <Context docBase="c:\path\to\v1\app.war" path="/app/v1"/>
+   <Context docBase="c:\path\to\v2\app.war" path="/app/v2"/>
 * Active directory vs LDAP: AD is a directory services database, and LDAP is one of the protocols you can use to talk to it.
 *  Difference between read timeout, socket timeout and connection timeout: connection timeout: occurs only upon starting the TCP connection. This usually happens if the remote machine does not answer. 
 socket timeout: is dedicated to monitor the continuous incoming data flow. If the data flow is interrupted for the specified timeout the connection is regarded as stalled/broken. Of course this only works with connections where data is received all the time..
 ReadTime: Timeout to read data
 * How do you troubleshoot slow running website ?
 
-Scripts:
+# Scripts:
 
 * Write a Terraform configuration that provisions an EC2 instance and creates security group rules restricting access to only SSH IP whitelist. Use variables appropriately to allow the instance to be created in any data center, change the instance type, and change the IP whitelist.
 * Write a Dockerfile that installs the latest Python AWS CLI and allows the container run the AWS CLI tool on the command line. The final container image should contain only the necessary elements for support the AWS CLI execution.
