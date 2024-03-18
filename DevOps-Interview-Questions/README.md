@@ -1,6 +1,8 @@
 
 # Bash/Linux:
 
+* What is shebang #! in linux : The part after the #! tells Unix what program to use to run it. If it isn't specified, it will try with bash (or sh, or zsh, or whatever your $SHELL variable is) but if it's there it will use that program.
+* $? -> used to store output of previously executed command.
 * What is the function of inodes in a Linux filesystem: Index node, stores meta data of a file, unique identified of the file system on linux that provides info on what permissions file has 
 * What happens when server restart: It boot up the processes, initializes the kernel, starts the system control that starts all other processes
 * Command to use to increase the priority of a linux process : nice
@@ -11,9 +13,10 @@
 * Explain Zombie process and how do you find them : https://linoxide.com/how-tos/kill-zombie-process-linux/
 * Orphan processess : An orphan process is a computer process whose parent process has finished or terminated, though it remains running itself.
 * Crontab
-
-
-
+* What does Linux kernel do : Memory management, System calls and security, Process management
+* What are Routing table in linux:  information on how packets are to be forwarded is stored in a kernel structure called a routing table.The routing table can be used for both static and dynamic routing
+* what is IPtables: Virtual firewalls to your host that manages incoming and outgoing traffic.
+* what is PATH variable in linux:  PATH is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files 
 
 
 
@@ -36,18 +39,23 @@
 
 * How do you monitor docker containers: by using docker stats, docker events
 * Can you run a Docker container within a Docker container: Yes you can run Docker inside Docker by running Docker in privileged mode.
-* 
+* Different types of docker networks: Bridge, host, Overlay, ingress, Macvlan
+* How to handle OOM in a Docker container
+
 
 # Kubernates:
 
 * Stateless vs State applications :  Stateless applications don't store any data in the host which makes it ideal for horizontal scaling and microservices. Stateful applications depend on the storage to save state and data, typically databases are stateful applications.
 * Kubernates API versioning : To make it easier to eliminate fields or restructure resource representations, Kubernetes supports multiple API versions, each at a different API path, such as /api/v1 or /apis/extensions/v1beta1.
 * Recommended security measures for Kubernetes?
-
-
+* Minikube : https://kubernetes.io/docs/tasks/tools/install-minikube/
+* Difference between Blue green and Canary deployment.
 
 
 # Terraform:
+
+* What is terraform and explain its benefits ??
+
 
 # AWS:
 
@@ -57,6 +65,16 @@ https://stackoverflow.com/questions/32164706/ec2-security-group-vs-iam-group
 * Ssl termination at load balancer or web server level : Depends upon requirement if web servers and LB lies in same DC, I would prefer at LB level.
 * What is An ephemeral storage: storage that is temporary (or) non-persistent
 * what is CDN, how does it work ?
+* Public IP vs Elastic IP : https://www.quora.com/Whats-the-difference-between-a-public-IP-and-an-elastic-IP-in-AWS-EC2
+* AWS CFT vs Terraform: https://cloudonaut.io/cloudformation-vs-terraform/
+*  How to prevent DDOS (Denial of service):
+*  How do you monitor if an EC2 is going down
+*  How do you recover login to ec2 instance to which you lost the key (once key is lost, it is lost)
+*  How do you monitor VPC
+*  How many EC2 instances you can create in VPC/Subnet:
+*  Difference between snapshot and AMI : https://cloudranger.com/ami-or-ebs-snapshots/
+*  Differences between 3 AWS load balancers: https://medium.com/awesome-cloud/aws-difference-between-application-load-balancer-and-network-load-balancer-cb8b6cd296a4
+*  Alternatives of AWS Cloudfront ?
 
 # Security:
 
@@ -67,20 +85,43 @@ https://stackoverflow.com/questions/32164706/ec2-security-group-vs-iam-group
 * How does ssl handshake works: https://www.ssl2buy.com/wiki/how-does-an-ssl-certificate-work
 * Difference between SSL vs TLS:  SSL and TLS are cryptographic protocols that authenticate data transfer between servers, systems, applications and users. Differ in cipher suites they both offer.
 * ipv4 vs ipv6: https://www.guru99.com/difference-ipv4-vs-ipv6.html
+* Router VS GATEWAY:
+* One way vs Two way SSL handshake: One-way SSL authentication is if the client only verifies the certificate of the server. This validation is done to make sure that it is the expected server, i.e. no man in the middle attack.
+Two-way SSL authentication (or better mutual authentication or client authentication) is if the server also verifies the certificate of the client. This is done to authenticate the client against the server using a certificate.
+* Explain OSI Open Systems Interconnection ?
+* TCP vs HTTP vs SSL : TCP is your Postal Service just focus on delivering, sequencing of packets,T used mechanisms of sequence and acknowledgment, error detection, error recov. HTTP is your letters, words, messages, requests and commands that go into the envelopes.
+* Explain details what happens when you type curl https://******** ?
+* How to organize a monitoring in a n-node cluster running web application ?
 
 # Database:
 
 * How to scale a database without just increasing capacity of a single machine while maintaining
 * SQL vs NOSQL ?
 * How does Indexing in SQL work: Indexing work same as searching of data work in database. It uses binary search to search the data.
-* Primary vs Foreign Key: 
+* Primary vs Foreign Key:
+* Optimistic locking vs Pessimistic locking : Optimistic locking is when you check if the record was updated by someone else before you commit the transaction. Pessimistic locking is when you take an exclusive lock so that no one else can start modifying the record.
+* Benefits of SQL views
 
 
+# Java:
 
+* Explain Memory leaks : A Memory Leak is a situation when there are objects present in the heap that are no longer used, but the garbage collector is unable to remove them from memory and, thus they are unnecessarily maintained.
+* Causes of memory leaks:
+* How to detect memory leaks:https://www.toptal.com/java/hunting-memory-leaks-in-java
+* High CPU utilization:https://bobcares.com/blog/high-cpu-utilization/
+* Interview questions on Maven: https://career.guru99.com/top-20-maven-interview-questions/
+* Advantages and disadvantages of Recursion: Recursion in java is a process in which a method calls itself continuously.
+
+
+# Design: 
+
+* How do you scale out a web service ?
+* Describe full set up of a 3 tier web app
 
 
 # Others:
 
+* What happens when you hit google.com in your browser
 * Difference between proxy and LoadBalancer : load balancing refers to efficiently distributing incoming network traffic across a group of backend servers. proxy is a gateway to a server or group of servers., proxy can perform authentication tasks, as well as cache or decrypt data.
 * Different types of algorithms used in load balancers
 * Difference between ASCII and UTF8
@@ -98,12 +139,10 @@ EAR: All above files (.jar and .war) are packaged as JAR file with .ear (enterpr
 * How can uou deploy same application multiple times on tomcat server ? change the context path
   <Context docBase="c:\path\to\v1\app.war" path="/app/v1"/>
 <Context docBase="c:\path\to\v2\app.war" path="/app/v2"/>
-* 
-
-
-
-
-
+* Active directory vs LDAP: AD is a directory services database, and LDAP is one of the protocols you can use to talk to it.
+*  Difference between read timeout, socket timeout and connection timeout: connection timeout: occurs only upon starting the TCP connection. This usually happens if the remote machine does not answer. 
+socket timeout: is dedicated to monitor the continuous incoming data flow. If the data flow is interrupted for the specified timeout the connection is regarded as stalled/broken. Of course this only works with connections where data is received all the time..
+ReadTime: Timeout to read data
 
 
 
