@@ -31,8 +31,6 @@
 * what are git hooks: Git hooks are scripts that Git executes before or after events such as: commit, push, and receive. Git hooks are a built-in feature.
 * Diff git merge and rebase: GIT Merge and rebase will handle conflicts differently. Rebase will present conflicts one commit at a time where merge will present them all at once.
 * Diff git reset and revert: git reset and git revert is that git reset will reset the state of the branch to a previous state by dropping all the changes post the desired commit while git revert will reset to a previous state by creating new reverting commits and keep the original commits.
-* 
-
 
 
 # Docker:
