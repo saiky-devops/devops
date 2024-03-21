@@ -5,7 +5,7 @@
 * $? -> used to store output of previously executed command.
 * What is the function of inodes in a Linux filesystem: Index node, stores meta data of a file, unique identified of the file system on linux that provides info on what permissions file has 
 * What happens when server restart: It boot up the processes, initializes the kernel, starts the system control that starts all other processes
-* Command to use to increase the priority of a linux process : nice
+* Command to use to increase the priority of a linux process : renice
 * Command to use to spike up CPU utilization : Stress —cpu 10 -v --timeout 400s
 * nmap : Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing.
 * what is /etc/profile : Shell profile used by Linux and Mac OS X terminal programs; contains definitions for a shell environment, such as environment variables, scripts to execute, and other instructions
@@ -36,10 +36,10 @@
 # Docker:
 
 * Why docker: Easy boot up, Better resource utilization, Environment consistency, Loosely coupled, distributed, elastic, liberated micro-services: applications are broken into smaller, independent pieces and can be deployed and managed dynamically
-* How do you monitor docker containers: by using docker stats, docker events
+* How do you monitor docker containers: 
 * Can you run a Docker container within a Docker container: Yes you can run Docker inside Docker by running Docker in privileged mode.
 * Different types of docker networks: Bridge, host, Overlay, ingress, Macvlan
-* How to handle OOM in a Docker container
+* How to handle OOM in a Docker container ?
 
 
 # Kubernates:
