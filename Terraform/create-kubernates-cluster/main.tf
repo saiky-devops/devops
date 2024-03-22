@@ -1,7 +1,7 @@
 ## Create kuberates cluster
 
 provider "google" {
-  project = "amiable-evening-248903"
+  project = "<project id>"
   region  = "us-central1"
   zone    = "us-central1-a"
 }
@@ -10,6 +10,7 @@ resource "google_container_cluster" "kube-cluster" {
   name               = "kube-cluster"
   location           = "us-central1"
   initial_node_count = 1
+  deletion_protection = false  # Update deletion_protection to true/false based on your requirement
 
   node_config {
     machine_type = "e2-standard-2"
