@@ -54,7 +54,7 @@
 
 # Terraform:
 
-* What is terraform and explain its benefits ??
+* Have you used terraform before and explain where did you use ? Difference btw terraform vs aws ?
 
 
 # AWS:
