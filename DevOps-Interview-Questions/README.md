@@ -44,17 +44,20 @@
 
 # Kubernates:
 
+* Explain Kubernates master, worker node components ?
 * Stateless vs State applications :  Stateless applications don't store any data in the host which makes it ideal for horizontal scaling and microservices. Stateful applications depend on the storage to save state and data, typically databases are stateful applications.
 * Kubernates API versioning : To make it easier to eliminate fields or restructure resource representations, Kubernetes supports multiple API versions, each at a different API path, such as /api/v1 or /apis/extensions/v1beta1.
 * Recommended security measures for Kubernetes?
 * Minikube : https://kubernetes.io/docs/tasks/tools/install-minikube/
 * Difference between Blue green and Canary deployment.
-* Difference between NameSpaces & Labels: 
+* Difference between NameSpaces & Labels:
+* Different types of services in Kubernates ? 
 
 
 # Terraform:
 
 * Have you used terraform before and explain where did you use ? Difference btw terraform vs aws ?
+* How do you manage terraform state files ?
 
 
 # AWS:
