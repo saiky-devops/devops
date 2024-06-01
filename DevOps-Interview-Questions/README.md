@@ -156,6 +156,8 @@ ReadTime: Timeout to read data
 * Write a bash script that hits the AWS EC2 local metadata API, and can be run on an EC2 instance to produce `export` statements which set environment variables containing the instance type, IP address, region, and availability zone.
 
 
+# Some useful websites:
 
+https://www.devopshunt.com/
 
 
