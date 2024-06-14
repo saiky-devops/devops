@@ -158,7 +158,7 @@ ReadTime: Timeout to read data
 
 # Some useful websites:
 
-https://www.devopshunt.com/
-https://codedex.io/ (Learn Python)
+* https://www.devopshunt.com/
+* https://codedex.io/ (Learn Python)
 
 
