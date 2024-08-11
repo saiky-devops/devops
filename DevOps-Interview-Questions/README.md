@@ -160,5 +160,6 @@ ReadTime: Timeout to read data
 
 * https://www.devopshunt.com/
 * https://codedex.io/ (Learn Python)
+* https://devopscube.com/become-devops-engineer/ (Become a devops engineer)
 
 
