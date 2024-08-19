@@ -1,3 +1,5 @@
+# This script makes an api call to fetch a new token each time when called
+
 import requests
 try:
     api_op=requests.get("https://www.uuidtools.com/api/generate/v4")
