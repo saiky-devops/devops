@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # This script makes an api call to fetch a new token each time when called
 
 import requests
